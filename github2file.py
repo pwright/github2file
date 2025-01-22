@@ -87,7 +87,7 @@ def construct_download_url(repo_url, branch_or_tag):
     else:
         raise ValueError("Unsupported repository URL. Only GitHub and GitLab URLs are supported.")
 
-def download_repo(repo_url, output_file, lang, keep_comments=False, branch_or_tag="main", token=None):
+def download_repo(repo_url, output_file, lang, keep_comments=False, branch_or_tag="main", token=None,claude=False):
     """Download and process files from a GitHub or GitLab repository."""
     download_url = construct_download_url(repo_url, branch_or_tag)
     headers = {}
